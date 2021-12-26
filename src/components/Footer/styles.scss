@@ -1,0 +1,31 @@
+@use '../../styles/variables' as *;
+
+footer {
+  text-align: center;
+  padding: $base-spacing 0;
+  background-color: $light-grey;
+  color: $dark-grey;
+
+  p {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+  }
+
+  .footer-icon {
+    color: $dark-grey;
+    margin: 0 1rem;
+    font-size: $font-medium;
+    transition: all 0.3s;
+
+    &:hover {
+        color: $dark-blue;
+    }
+  }
+
+  @media (min-width: $breakpoint-mobile) {
+    .footer-icon {
+        font-size: $font-large;
+        margin: 0 1.3rem;
+    }
+  }
+}
