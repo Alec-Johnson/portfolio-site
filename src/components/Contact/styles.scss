@@ -1,0 +1,93 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.contact {
+  background-color: $dark-grey;
+  position: relative;
+
+  .wave-decoration {
+    background-color: $white;
+    width: 100%;
+    svg {
+      display: block;
+    }
+  }
+
+  .text {
+    max-width: 800px;
+    padding: $base-spacing $double-spacing;
+    color: $white;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: $font-large;
+    margin: $base-spacing 0;
+    text-align: center;
+    color: $white;
+  }
+
+  .btn {
+    height: 60px;
+    width: 150px;
+    margin: $base-spacing;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($orange, 0.95);
+    border: 5px solid $white;
+    transition: all 0.3s ease-in-out;
+
+    a {
+      color: $white;
+      width: 100%;
+      font-size: 1.2rem;
+      font-family: $font-heading;
+      font-weight: 600;
+    }
+
+    &:hover {
+      background-color: rgba($orange, 1);
+    }
+  }
+
+  .btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .scroll-to-top {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    svg {
+      cursor: pointer;
+      font-size: $font-medium;
+      fill: $white;
+      display: block;
+    }
+  }
+
+  @media all and (min-width: 450px) {
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    .btn-wrapper {
+      flex-direction: row;
+    }
+  }
+
+  @media all and (min-width: $breakpoint-tablet) {
+    h2 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+    }
+  }
+}
