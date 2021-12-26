@@ -1,0 +1,56 @@
+@use './variables' as *;
+
+// Set global variables
+:root {
+  --text-color: #{$dark-grey};
+  --heading-color: #{$dark-blue};
+  --bg-color: #{$white};
+}
+
+// Global Styling
+body {
+  font-family: $font-body;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: $line-height;
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-color);
+  font-family: $font-heading;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:focus-visible {
+  outline: 2px dashed #e2711d;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
