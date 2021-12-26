@@ -1,0 +1,31 @@
+// Google Fonts import
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600;700&display=swap');
+
+// Font Variables
+$font-heading: 'Poppins', sans-serif;
+$font-body: 'Open Sans', sans-serif;
+
+$font-standard: 1rem;
+$font-medium: 1.5rem;
+$font-large: 2rem;
+$line-height: 1.7;
+
+// Color Variables
+$dark-blue: #336699;
+$light-blue: #86bbd8;
+$dark-grey: #2b2b2b;
+$light-grey: #e9ecef;
+$white: #fff;
+$orange: #ff9500;
+
+// Spacing Variables
+$small-spacing: 0.5rem;
+$base-spacing: 1rem;
+$medium-spacing: 1.5rem;
+$double-spacing: 2rem;
+
+// Breakpoints (Media Queries)
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-desktop-lg: 1400px;
