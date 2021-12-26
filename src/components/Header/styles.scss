@@ -1,0 +1,155 @@
+@use '../../styles/_variables.scss' as *;
+@use '../../styles/_mixins.scss' as *;
+
+header {
+  position: relative;
+
+  .top-bar {
+    padding: $base-spacing;
+    @include flex-layout-row-center;
+    justify-content: space-between;
+  }
+
+  .main-nav {
+    width: 100%;
+    @include flex-layout-column-center;
+    text-align: center;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $dark-blue;
+    background: rgba($dark-blue, 0.95);
+    backdrop-filter: blur(5px);
+
+    z-index: 9;
+
+    ul {
+      @include ul-base;
+
+      li {
+        margin: $double-spacing 0;
+      }
+    }
+
+    a {
+      display: inline-block;
+      color: rgba($white, 0.75);
+      font-weight: 700;
+      font-size: 2.5rem;
+      transition: color 0.3s ease-in-out;
+      font-family: $font-heading;
+    }
+
+    a.active {
+      color: $dark-blue;
+    }
+
+    .nav-social-media {
+      a {
+        margin: 0 $small-spacing;
+      }
+    }
+  }
+
+  &.active .main-nav {
+    height: 100%;
+    visibility: visible;
+
+    a.active {
+      color: rgba($white, 0.75);
+    }
+
+    a:hover {
+      color: rgba($white, 1);
+    }
+  }
+
+  .header-logo-container {
+    svg {
+      width: 40px;
+      height: 40px;
+      display: block;
+    }
+  }
+
+  .btn-main-nav {
+    z-index: 10; // Keeps CloseIcon on top of mobile nav when opened
+    border: none;
+    outline: none;
+    background-color: inherit;
+    cursor: pointer;
+  }
+
+  &.active .btn-main-nav {
+    position: fixed;
+    right: $base-spacing;
+  }
+
+  .closeIcon {
+    fill: $white;
+  }
+
+  svg {
+    transition: all 0.7s ease-in-out;
+  }
+
+  @media all and (min-width: $breakpoint-mobile) {
+    .header-logo-container {
+      img {
+        margin-left: $base-spacing;
+      }
+    }
+
+    .btn-main-nav {
+      display: none;
+    }
+
+    .main-nav {
+      visibility: visible;
+      transition: none;
+      height: auto;
+      width: auto;
+      background-color: inherit;
+      position: relative;
+
+      ul {
+        display: flex;
+
+        li {
+          margin: 0 $base-spacing;
+        }
+      }
+
+      a {
+        color: $dark-grey;
+        font-weight: 600;
+        font-size: 1.2rem;
+        position: relative;
+      }
+
+      a::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 4px;
+        background-color: $dark-blue;
+        transition: width 0.35s ease-in-out;
+      }
+
+      a:hover::before {
+        width: 100%;
+      }
+
+      .nav-social-media {
+        display: none;
+      }
+    }
+  }
+}
