@@ -6,6 +6,7 @@ import { ReactComponent as Laptop } from '../../assets/icons/Laptop.svg';
 import { ReactComponent as DownArrow } from '../../assets/icons/DownArrowIcon.svg';
 import './styles.scss';
 import Contact from '../../components/Contact/Contact';
+import Weather from '../../components/Weather/Weather';
 
 const HomePage = () => {
   const elementRef = useRef<HTMLElement>(null);
@@ -44,6 +45,7 @@ const HomePage = () => {
             </Link>
           </div>
         </div>
+        <Weather />
         <button onClick={executeScroll} className="scroll-btn">
           <DownArrow />
         </button>
