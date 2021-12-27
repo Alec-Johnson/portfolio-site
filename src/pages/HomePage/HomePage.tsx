@@ -5,10 +5,10 @@ import { Helmet } from 'react-helmet-async';
 import { ReactComponent as Laptop } from '../../assets/icons/Laptop.svg';
 import { ReactComponent as DownArrow } from '../../assets/icons/DownArrowIcon.svg';
 import './styles.scss';
-import Contact from '../../components/Contact/Contact';
-import Weather from '../../components/Weather/Weather';
 
-const HomePage = () => {
+import { Weather, Contact } from '../../components';
+
+export const HomePage = () => {
   const elementRef = useRef<HTMLElement>(null);
   const executeScroll = () =>
     elementRef.current?.scrollIntoView({ behavior: 'smooth' });

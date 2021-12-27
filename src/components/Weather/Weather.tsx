@@ -4,7 +4,7 @@ import { format } from 'date-fns'
 import { motion } from 'framer-motion';
 import './styles.scss';
 
-const Weather = () => {
+export const Weather = () => {
   const [temp, setTemp] = useState<number | null>(null);
   const [description, setDescription] = useState(null);
   const [date, setDate] = useState<string | null>(null);
@@ -45,5 +45,3 @@ const Weather = () => {
     </motion.section>
   );
 };
-
-export default Weather;

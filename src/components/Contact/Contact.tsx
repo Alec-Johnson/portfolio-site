@@ -3,7 +3,7 @@ import { email } from '../../globals/globalVar';
 import { FaArrowCircleUp } from 'react-icons/fa';
 import './styles.scss';
 
-const Contact = () => {
+export const Contact = () => {
   const location = useLocation();
 
   const toTop = () => {
@@ -61,5 +61,3 @@ const Contact = () => {
     </section>
   );
 };
-
-export default Contact;

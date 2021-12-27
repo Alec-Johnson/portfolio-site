@@ -1,0 +1,36 @@
+# Stage 1
+# Build docker image of react app
+FROM node:16.13.0 as build-stage
+
+# Working directory
+RUN mkdir /usr/app
+
+# Copy all files from the working directory to new docker directory
+COPY . /usr/app
+
+WORKDIR /usr/app
+
+# Install dependencies and cache them, use Yarn for parallel package installation(faster then npm)
+RUN yarn
+
+# add node_modules to the path
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
+ENV REACT_APP_WEATHER_API_KEY=eab8c3ea63e13bd4f8f90db21317dfaa
+
+RUN npm run build
+
+# Stage 2
+# Copy the react app build above in nginx
+FROM nginx:alpine
+
+# Set the working directory to nginx assset directory
+WORKDIR /usr/share/nginx/html
+
+# Remove default nginx static assets
+RUN rm -rf ./*
+
+# Copy static assets from builder stage
+COPY --from=build-stage /usr/app/build .
+
+# Containers run nginx with global directive and daemon off
+ENTRYPOINT [ "nginx", "-g", "daemon off;" ]

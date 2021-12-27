@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import './styles.scss';
 
-const ErrorPage = () => {
+export const ErrorPage = () => {
   return (
     <motion.div
       className="page-not-found-container main-wrapper"
@@ -27,5 +27,3 @@ const ErrorPage = () => {
     </motion.div>
   );
 };
-
-export default ErrorPage;

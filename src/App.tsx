@@ -1,14 +1,12 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
-import { Footer } from './components/Footer/Footer';
-import { Header } from './components/Header/Header';
-import HomePage from './pages/HomePage/HomePage';
-import ErrorPage from './pages/ErrorPage/ErrorPage';
+import { Footer, Header } from './components';
+import { HomePage, ErrorPage } from './pages';
 
 function App() {
   useEffect(() => {
@@ -21,24 +19,24 @@ function App() {
     });
   }, []);
   return (
-  <HelmetProvider>
-    <BrowserRouter>
-      <div className="site-wrapper">
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-{/* 
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/work" element={<ProjectsPage />} />
-            <Route path="/project-:id" element={<SingleProjectPage />} />*/}
-            <Route path="*" element={<ErrorPage />} /> 
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </BrowserRouter>
-  </HelmetProvider>
+    <HelmetProvider>
+      <BrowserRouter>
+        <div className="site-wrapper">
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+  {/* 
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/work" element={<ProjectsPage />} />
+              <Route path="/project-:id" element={<SingleProjectPage />} />*/}
+              <Route path="*" element={<ErrorPage />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 
