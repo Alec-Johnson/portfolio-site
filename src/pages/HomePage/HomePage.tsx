@@ -6,7 +6,7 @@ import { ReactComponent as Laptop } from '../../assets/icons/Laptop.svg';
 import { ReactComponent as DownArrow } from '../../assets/icons/DownArrowIcon.svg';
 import './styles.scss';
 
-import { Weather, Contact } from '../../components';
+import { Weather, Contact, FeaturedProjects } from '../../components';
 
 export const HomePage = () => {
   const elementRef = useRef<HTMLElement>(null);
@@ -67,7 +67,7 @@ export const HomePage = () => {
           </p>
         </div>
       </section>
-      {/* <FeaturedProjects /> */}
+      <FeaturedProjects />
       <Contact />
     </motion.div>
   );
