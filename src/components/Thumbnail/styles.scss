@@ -1,0 +1,127 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.project-thumbnail {
+  padding: 3rem $base-spacing;
+
+  overflow-x: hidden;
+
+  .thumbnail-wrapper {
+    position: relative;
+  }
+
+  h2 {
+    margin: $small-spacing 0 0 0;
+    font-size: $font-large;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 650px;
+
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+      rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .tools-list {
+    @include ul-base;
+    @include flex-layout-row-center;
+    justify-content: flex-start;
+
+    li {
+      margin-top: 0.3rem;
+      margin-right: $small-spacing;
+      padding: 0 0.3rem;
+      border: 2px solid $dark-grey;
+      font-size: 0.75rem;
+      font-family: $font-heading;
+      font-weight: 600;
+      border-radius: 6px;
+    }
+  }
+
+  .action-buttons {
+    a {
+      margin-right: $small-spacing;
+      border-bottom: 4px solid $dark-grey;
+      transition: border-color 0.3s ease-in-out;
+
+      &.more-info {
+        border-color: $orange;
+      }
+
+      &:hover,
+      &:focus {
+        border-color: $light-blue;
+      }
+    }
+  }
+
+  .thumbnail-text {
+    margin-top: $double-spacing;
+  }
+
+  // switch thumbnail img and text position (text->left, img->right) for even thumbnail projects
+  &:nth-of-type(2n) {
+    .thumbnail-text {
+      order: -1;
+    }
+  }
+
+  @media all and (min-width: $breakpoint-mobile) {
+    padding: 3rem $double-spacing;
+  }
+
+  @media all and (min-width: $breakpoint-tablet) {
+    padding: 4rem $double-spacing;
+
+    .thumbnail-wrapper {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    img {
+      max-width: 550px;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+    }
+
+    .thumbnail-text {
+      width: 40%;
+      margin-top: 0;
+    }
+
+    .project-thumbnail-image {
+      width: 50%;
+    }
+  }
+
+  @media all and (min-width: $breakpoint-desktop) {
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media all and (min-width: $breakpoint-desktop-lg) {
+    .thumbnail-wrapper {
+      max-width: 1300px;
+    }
+
+    img {
+      max-width: 600px;
+    }
+  }
+}
