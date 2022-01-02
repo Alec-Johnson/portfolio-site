@@ -1,0 +1,114 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.work-container {
+  overflow: hidden;
+
+  .projects-intro {
+    padding: 0 $base-spacing 4rem $base-spacing;
+    position: relative;
+
+    h1 {
+      margin: $base-spacing 0;
+      font-size: 3rem;
+      color: $dark-blue;
+    }
+
+    p {
+      font-size: $font-standard;
+      font-family: $font-heading;
+      font-weight: 600;
+    }
+
+    .sort-btns-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: $double-spacing;
+      flex-direction: column;
+
+      font-family: $font-heading;
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 0.2rem;
+      border: 1px solid $light-grey;
+      border-radius: 6px;
+      max-width: 440px;
+
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+
+    .scroll-btn {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      border: 0;
+      outline: 0;
+      background-color: inherit;
+      cursor: pointer;
+      padding: 0;
+
+      animation: upAndDown 1.5s ease-in-out infinite;
+
+      @keyframes upAndDown {
+        0% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-5px);
+        }
+
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .down-arrow {
+        fill: $dark-grey;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  .projects-list {
+    overflow-x: hidden;
+  }
+
+  @media all and (min-width: 425px) {
+    .projects-intro {
+      p {
+        font-size: $font-medium;
+      }
+
+      .sort-btns-group {
+        flex-direction: row;
+        @include margin-center;
+      }
+    }
+  }
+
+  @media all and (min-width: $breakpoint-mobile) {
+    .projects-intro {
+      padding-bottom: 4.5rem;
+
+      h1 {
+        text-align: center;
+        font-size: 4rem;
+      }
+
+      p {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 1.7rem;
+      }
+
+      .sort-btns-group {
+        font-size: $font-standard;
+      }
+    }
+  }
+}
