@@ -6,7 +6,8 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 import { Footer, Header } from './components';
-import { HomePage, ErrorPage } from './pages';
+import { HomePage, ErrorPage, WorkPage, ProjectDetailsPage } from './pages';
+import ScrollToTop from './utilities/ScrollToTop';
 
 function App() {
   useEffect(() => {
@@ -18,19 +19,20 @@ function App() {
       offset: 100,
     });
   }, []);
+
   return (
     <HelmetProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <div className="site-wrapper">
           <Header />
           <main>
             <Routes>
               <Route path="/" element={<HomePage />} />
-  {/* 
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/work" element={<ProjectsPage />} />
-              <Route path="/project-:id" element={<SingleProjectPage />} />*/}
-              <Route path="*" element={<ErrorPage />} />
+              <Route path="/work" element={<WorkPage />} />
+              {/* <Route path="/project-:id" element={<ProjectDetailsPage />} /> */}
+              {/*<Route path="/about" element={<AboutPage />} /> */}
+              {/* <Route path="*" element={<ErrorPage />} /> */}
             </Routes>
           </main>
           <Footer />
