@@ -16,17 +16,15 @@ export const Weather = () => {
           `https://api.openweathermap.org/data/2.5/weather?q=minneapolis&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`
         );
         const currentTemp = (weatherData.data.main.temp * 9/5) + 32;
+        const currentDate = format(new Date(), 'MMM dd');
         setTemp(currentTemp);
         setDescription(weatherData.data.weather[0].main);
-
-        // get current date based on the data from the weather api
-        const currentDate = format(new Date(), 'MMM dd');
         setDate(currentDate);
       } catch (err: any) {
         console.log(err.response.data.error);
       }
     };
-
+   
     getWeatherInfo();
   }, []);
   return (

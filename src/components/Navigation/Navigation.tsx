@@ -1,3 +1,5 @@
+
+import { FocusEvent, PointerEvent } from 'react';
 import { NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
@@ -7,11 +9,10 @@ import { AiFillGithub } from 'react-icons/ai';
 
 import { gitHubUrl, linkedInUrl, email } from '../../globals/globalVar';
 
-export const Navigation = ({ handleShowHide }: any) => {
-  //when user clicks a menu link or the element lost focus within the nav menu, close it
-  const closeNav = (e: any) => {
-    console.log(e.target);
-    
+export const Navigation = ({ handleShowHide }: {handleShowHide: () => void} ) => {
+
+  // Close nav when user clicks mobile menu link or loses focus
+  const closeNav = (e: FocusEvent<HTMLInputElement> & PointerEvent<HTMLElement> ) => {
     if (window.innerWidth < 576) {
       handleShowHide();
     } else {
