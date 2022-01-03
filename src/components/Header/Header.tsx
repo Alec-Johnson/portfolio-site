@@ -11,28 +11,26 @@ import './styles.scss'
 export const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
 
-  //function to toggle state to show/hide mobile navs when user click the hamburger/close button
+  // Show/hide mobile nav when user clicks the hamburger/close button
   const handleShowHide = () => {
     setNavOpen(!navOpen);
   };
 
-  const isDesktop = (e: any) => {
+  const isDesktop = (e: MediaQueryListEvent) => {
     if (e.matches) {
-      console.log(e);
-      
       setNavOpen(false);
     }
   };
 
-  //when browser width is larger than 576px, close the mobile nav
+  // Window > 576px, navOpen is false (close mobile nav)
   useEffect(() => {
     let mediaQuery = window.matchMedia('(min-width: 576px)');
     mediaQuery.addEventListener('change', isDesktop);
-    //cleanup function to remove the event listener
+    // Remove event listener on unmount
     return () => mediaQuery.removeEventListener('change', isDesktop);
   }, []);
 
-  // prevent scroll when mobile nav is open
+  // Prevent scroll when mobile nav is open
   useEffect(() => {
     document.body.style.overflow = navOpen ? 'hidden' : 'unset';
   }, [navOpen]);
@@ -42,7 +40,6 @@ export const Header = () => {
       <div className="top-bar">
         <div className="header-logo-container">
           <NavLink to="/" className="header-logo">
-            {' '}
             <Logo />
           </NavLink>
         </div>
