@@ -1,0 +1,18 @@
+@use '../../styles/variables' as *;
+
+a.url-link {
+  display: inline-block;
+  font-family: $font-heading;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.5rem;
+  margin: $small-spacing $base-spacing 0 0;
+  min-width: 135px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  background-color: $dark-grey;
+  color: $white;
+
+  &:hover {
+    background-color: rgba($dark-grey, 0.9);
+  }
+}

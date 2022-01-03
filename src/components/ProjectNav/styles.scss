@@ -1,0 +1,40 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.single-project-nav {
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 1000px;
+  margin: $double-spacing auto;
+
+  a {
+    display: inline-block;
+    font-family: $font-heading;
+    font-size: $font-standard;
+    padding: 0.3rem 0.5rem;
+    min-width: 120px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-4px);
+      color: $dark-blue;
+    }
+  }
+
+  svg {
+    font-size: $font-large;
+    vertical-align: middle;
+  }
+
+  @media all and (min-width: $breakpoint-mobile) {
+    a {
+      font-size: 1.3rem;
+    }
+
+    svg {
+      font-size: 2.5rem;
+    }
+  }
+}
