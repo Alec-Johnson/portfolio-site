@@ -16,6 +16,7 @@
     "date-fns": "^2.27.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-flip-toolkit": "^7.0.13",
     "react-helmet-async": "^1.2.2",
     "react-icons": "^4.3.1",
     "react-responsive-carousel": "^3.2.22",
@@ -30,7 +31,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy-prod": "react-scripts build && scp -r ./build/* root@164.90.159.201:/var/www/akj.dev/html"
   },
   "eslintConfig": {
     "extends": [
@@ -52,8 +54,9 @@
   },
   "devDependencies": {
     "@types/aos": "^3.0.4",
-    "@types/axios": "^0.14.0",
     "@types/react-router-hash-link": "^2.4.4",
+    "@types/simple-react-lightbox": "^3.6.1",
+    "process": "^0.11.10", 
     "sass": "^1.45.1"
   }
 }

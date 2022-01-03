@@ -1,4 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+.env
+Dockerfile.prod
+Dockerfile
+docker-compose.yml
 
 # dependencies
 /node_modules
