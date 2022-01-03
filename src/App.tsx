@@ -30,9 +30,9 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/work" element={<WorkPage />} />
-              {/* <Route path="/project-:id" element={<ProjectDetailsPage />} /> */}
+              <Route path="/project-:id" element={<ProjectDetailsPage />} />
               {/*<Route path="/about" element={<AboutPage />} /> */}
-              {/* <Route path="*" element={<ErrorPage />} /> */}
+              <Route path="*" element={<ErrorPage />} />
             </Routes>
           </main>
           <Footer />

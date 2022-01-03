@@ -1,0 +1,30 @@
+@use '../../styles/variables' as *;
+
+.single-project-container {
+
+  // Styling for accidently go into a single movie page via URL that does not have the movie detail yet
+  .no-project-detail {
+    margin-top: $double-spacing;
+    padding: $base-spacing;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      margin: $base-spacing 0;
+    }
+    .button-group {
+      margin-top: $small-spacing;
+      a:first-of-type {
+        margin-right: $base-spacing;
+      }
+
+      a {
+        color: $white;
+        background-color: $dark-blue;
+        padding: 0.3rem 0.5rem;
+      }
+    }
+  }
+}
