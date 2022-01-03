@@ -347,3 +347,15 @@ template {
 [hidden] {
   display: none;
 }
+
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
