@@ -19,7 +19,7 @@ export const Contact = () => {
       <div className="wave-decoration">
         <svg
           id="wave"
-          style={{ transform: 'rotate(0deg)', transition: '0.3s' }}
+          style={{ transform: 'rotate(0deg)'}}
           viewBox="0 0 1440 158"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +27,7 @@ export const Contact = () => {
           <defs>
             <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
               <stop stopColor="rgba(43, 43, 43, 1)" offset="0%"></stop>
-              <stop stopColor="rgba(51, 102, 153, 1)" offset="100%"></stop>
+              <stop stopColor="#8b8585" offset="100%"></stop>
             </linearGradient>
           </defs>
           <path
