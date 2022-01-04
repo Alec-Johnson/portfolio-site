@@ -1,19 +1,18 @@
 // Thumbnails: Screely.com -> add shadow/dark mode
-// Banners/Screenshots:
+// Banners/Screenshots: Smartmockups -> Screenshots are 2560x1600 for free macbook mockup
 
 // Thumbnail images for each project
 import portThumbnail from "../assets/thumbnails/portThumbnail.png";
 
 // Banner images for specific project page
-import portBanner from "../assets/images/myPortfolio/portSlide1.png";
+import portBanner from "../assets/banners/myPortfolio/portBanner.png";
 
 // Slider images for slider in specific project page
 /* Personal portfolio */
-import portSlide1 from "../assets/images/myPortfolio/portSlide1.png";
-import portSlide2 from "../assets/images/myPortfolio/portSlide2.png";
-import portSlide3 from "../assets/images/myPortfolio/portSlide3.png";
-import portSlide4 from "../assets/images/myPortfolio/portSlide4.png";
-import portSlide5 from "../assets/images/myPortfolio/portSlide5.png";
+import portSlide1 from "../assets/images/myPortfolio/deskPortWork.png";
+import portSlide2 from "../assets/images/myPortfolio/portHomeDesk.png";
+import portSlide3 from "../assets/images/myPortfolio/portProjDesk.png";
+import portSlide4 from "../assets/images/myPortfolio/portProjDesk2.png";
 /* Reddit Clone */
 /* E-commerce project */
 /* Evernote clone */
@@ -88,7 +87,7 @@ export const rawProjectData: Project[] = [
 		],
 		imgSlider: {
 			sliderTitle: "Website Screenshots",
-			images: [portSlide1, portSlide2, portSlide3, portSlide4, portSlide5],
+			images: [portSlide1, portSlide2, portSlide3, portSlide4],
 		},
 		reflection: [
 			"This portfolio project gave me an opportunity to try out new skills and get familiar with React during the process. It also let me realize how React components are useful when building templates to serve project data. I spent a lot of time planning before the design and development phase. Breaking down the project into small pieces, following the plan allows me to make the workflow smoother and more efficient. ",
@@ -132,7 +131,7 @@ export const rawProjectData: Project[] = [
 		],
 		imgSlider: {
 			sliderTitle: "Website Screenshots",
-			images: [portSlide1, portSlide2, portSlide3, portSlide4, portSlide5],
+			images: [portSlide1, portSlide2, portSlide3, portSlide4],
 		},
 		reflection: [
 			"This portfolio project gave me an opportunity to try out new skills and get familiar with React during the process. It also let me realize how React components are useful when building templates to serve project data. I spent a lot of time planning before the design and development phase. Breaking down the project into small pieces, following the plan allows me to make the workflow smoother and more efficient. ",
@@ -176,7 +175,7 @@ export const rawProjectData: Project[] = [
 		],
 		imgSlider: {
 			sliderTitle: "Website Screenshots",
-			images: [portSlide1, portSlide2, portSlide3, portSlide4, portSlide5],
+			images: [portSlide1, portSlide2, portSlide3, portSlide4],
 		},
 		reflection: [
 			"This portfolio project gave me an opportunity to try out new skills and get familiar with React during the process. It also let me realize how React components are useful when building templates to serve project data. I spent a lot of time planning before the design and development phase. Breaking down the project into small pieces, following the plan allows me to make the workflow smoother and more efficient. ",
