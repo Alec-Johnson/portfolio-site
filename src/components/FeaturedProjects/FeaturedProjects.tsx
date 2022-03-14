@@ -28,7 +28,7 @@ export const FeaturedProjects = () => {
                   />
                   <div className="project-card-text">
                     <a
-                      href={featuredProject.live}
+                      href={featuredProject.link}
                       target="_blank"
                       rel="noreferrer"
                     >

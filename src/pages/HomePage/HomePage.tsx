@@ -37,7 +37,7 @@ export const HomePage = () => {
           <div className="text">
             <h1>I'm Alec Johnson</h1>
             <p>
-              A <mark>front-end developer</mark> based in Minneapolis, Minnesota.
+              A <mark>web developer</mark> based in Minneapolis, Minnesota.
             </p>
             <Link className="work-btn homepage-btn" to="/work">
               View My Work
@@ -54,13 +54,13 @@ export const HomePage = () => {
         <div className="text">
           <h2>One Pixel at a Time</h2>
           <p>
-            A self-motivated front-end developer with{' '}
+            A self-motivated web developer with{' '}
             <Link className="link-to-work" to="/work">
               <span>hands-on project experiences</span>
             </Link>{' '}
             designing and building websites from scratch. My goal is to build
             websites with both visually appealing and user experience-oriented
-            functionality.
+            functionality. I'm always looking to learn new technologies and increase my skill set.
             <Link className="link-to-about" to="/about">
               <span> More about me.</span>
             </Link>
